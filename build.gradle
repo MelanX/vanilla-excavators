@@ -1,54 +1,104 @@
-plugins {
-	id 'fabric-loom' version '0.2.4-SNAPSHOT'
+buildscript {
+	repositories {
+		maven { url = 'https://files.minecraftforge.net/maven' }
+		maven { url "https://plugins.gradle.org/m2/" }
+		jcenter()
+		mavenCentral()
+	}
+	dependencies {
+		classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '3.+', changing: true
+	}
 }
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+apply plugin: 'net.minecraftforge.gradle'
+apply plugin: 'eclipse'
+apply plugin: 'maven-publish'
 
-archivesBaseName = "vanillaexcavators"
-version = "1.0.2"
+version = "${mc_version}-${mod_version}"
+group = 'de.melanx.vanillaexcavators'
+archivesBaseName = 'vanillaexcavators'
+
+sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8'
 
 minecraft {
+	mappings channel: 'snapshot', version: mappings_version
+
+	runs {
+		client {
+			workingDirectory project.file('run')
+
+			property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
+
+			property 'forge.logging.console.level', 'debug'
+
+			mods {
+				vanillaexcavators {
+					source sourceSets.main
+				}
+			}
+		}
+
+		server {
+			workingDirectory project.file('run_server')
+
+			property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
+
+			property 'forge.logging.console.level', 'debug'
+
+			mods {
+				vanillaexcavators {
+					source sourceSets.main
+				}
+			}
+		}
+
+		data {
+			workingDirectory project.file('run_data')
+
+			// Recommended logging data for a userdev environment
+			property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
+
+			// Recommended logging level for the console
+			property 'forge.logging.console.level', 'debug'
+
+			args '--mod', 'vanillaexcavators', '--all', '--output', '"' + file('src/generated/resources/') + '"', '--existing', '"' + file('src/main/resources/') + '"'
+
+			mods {
+				vanillaexcavators {
+					source sourceSets.main
+				}
+			}
+		}
+	}
+}
+
+sourceSets.main.resources {
+	srcDir 'src/generated/resources'
 }
 
 repositories {
-	jcenter()
-
-	maven { url = "https://maven.fabricmc.net/" }
-	maven { url = 'http://maven.sargunv.s3-website-us-west-2.amazonaws.com/' }
-	maven { url = 'http://server.bbkr.space:8081/artifactory/libs-release' }
-	maven { url = 'https://jitpack.io' }
-
-	jcenter()
+	maven {
+		// location of the maven that hosts JEI files
+		name = "Progwml6 maven"
+		url = "https://dvs1.progwml6.com/files/maven/"
+	}
 }
-
 
 dependencies {
-	minecraft "com.mojang:minecraft:1.14.4"
-	mappings "net.fabricmc:yarn:1.14.4+build.5"
-	modApi "net.fabricmc:fabric-loader:0.4.8+build.159"
-	modApi "net.fabricmc.fabric-api:fabric-api:0.3.0+build.207"
-
-	// LibCD for conditional recipes
-	modApi 'io.github.cottonmc:LibCD:1.3.1+1.14.4'
-	include 'io.github.cottonmc:LibCD:1.3.1+1.14.4'
-
-	// auto config
-	modApi "me.sargunvohra.mcmods:auto-config:1.2.0+mc1.14.4"
-	include "me.sargunvohra.mcmods:auto-config:1.2.0+mc1.14.4"
-
-	// cloth config
-	modApi 'me.shedaniel.cloth:config-2:0.5.2'
-	include 'me.shedaniel.cloth:config-2:0.5.2'
-
-	// DynaGear for hammers in more materials
-	modApi "io.github.cottonmc:DynaGear:1.2.0+1.14.3"
+	minecraft "net.minecraftforge:forge:${mc_version}-${forge_version}"
+	runtimeOnly fg.deobf("mezz.jei:jei-1.15.1:6.0.0.1")
 }
 
-// Loom will automatically attach sourcesJar to a RemapSourcesJar task and to the "build" task
-// if it is present.
-// If you remove this task, sources will not be generated.
-task sourcesJar(type: Jar, dependsOn: classes) {
-	classifier = 'sources'
-	from sourceSets.main.allSource
+jar {
+	manifest {
+		attributes([
+				"Specification-Title": "vanillaexcavators",
+				"Specification-Vendor": "vanillaexcavators",
+				"Specification-Version": "1", // We are version 1 of ourselves
+				"Implementation-Title": project.name,
+				"Implementation-Version": "${version}",
+				"Implementation-Vendor" :"vanillaexcavators",
+				"Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+		])
+	}
 }
