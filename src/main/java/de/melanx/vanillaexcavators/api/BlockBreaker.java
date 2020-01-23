@@ -1,4 +1,4 @@
-package com.github.draylar.ve.api;
+package de.melanx.vanillaexcavators.api;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;

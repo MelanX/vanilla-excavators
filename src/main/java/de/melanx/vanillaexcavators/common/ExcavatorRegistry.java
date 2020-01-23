@@ -1,7 +1,7 @@
-package com.github.draylar.ve.common;
+package de.melanx.vanillaexcavators.common;
 
-import com.github.draylar.ve.config.VanillaExcavatorsConfig;
-import com.github.draylar.ve.api.ExcavatorItem;
+import de.melanx.vanillaexcavators.config.VanillaExcavatorsConfig;
+import de.melanx.vanillaexcavators.api.ExcavatorItem;
 import me.sargunvohra.mcmods.autoconfig1.AutoConfig;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.item.ToolMaterial;

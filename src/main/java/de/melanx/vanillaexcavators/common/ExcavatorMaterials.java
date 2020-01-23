@@ -1,6 +1,6 @@
-package com.github.draylar.ve.common;
+package de.melanx.vanillaexcavators.common;
 
-import com.github.draylar.ve.VanillaExcavators;
+import de.melanx.vanillaexcavators.VanillaExcavators;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;

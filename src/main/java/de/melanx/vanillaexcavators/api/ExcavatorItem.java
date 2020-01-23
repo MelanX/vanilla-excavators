@@ -1,6 +1,6 @@
-package com.github.draylar.ve.api;
+package de.melanx.vanillaexcavators.api;
 
-import com.github.draylar.ve.VanillaExcavators;
+import de.melanx.vanillaexcavators.VanillaExcavators;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;
@@ -12,7 +12,6 @@ import net.minecraft.item.*;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-import java.util.Map;
 import java.util.Set;
 
 public class ExcavatorItem extends ShovelItem
