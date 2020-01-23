@@ -1,109 +1,145 @@
 package de.melanx.vanillaexcavators.common;
 
-import de.melanx.vanillaexcavators.VanillaExcavators;
-import net.minecraft.block.Blocks;
-import net.minecraft.item.Items;
-import net.minecraft.item.ToolMaterial;
-import net.minecraft.recipe.Ingredient;
-import net.minecraft.tag.ItemTags;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.Lazy;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.item.IItemTier;
+import net.minecraft.item.Item;
+import net.minecraft.item.crafting.Ingredient;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.Tag;
+import net.minecraft.util.LazyLoadBase;
+import net.minecraftforge.common.Tags;
 
 import java.util.function.Supplier;
 
-public enum ExcavatorMaterials implements ToolMaterial
-{
-    WOOD(0, 59 * VanillaExcavators.DURABILITY_MODIFIER, 2.0F / 3.5f, 0.0f, 15, () -> {
+public enum ExcavatorMaterials implements IItemTier {
+    WOOD(0, 59, 2.0F / 3.5f, 0.0f, -2.5F, 15, () -> {
         return Ingredient.fromTag(ItemTags.PLANKS);
-    }),
-    STONE(1, 131 * VanillaExcavators.DURABILITY_MODIFIER, 4.0F / 3.5f, 0.0f, 5, () -> {
-        return Ingredient.ofItems(Blocks.COBBLESTONE);
-    }),
-    IRON(2, 250 * VanillaExcavators.DURABILITY_MODIFIER, 6.0F / 3.5f, 0.0f, 14, () -> {
-        return Ingredient.ofItems(Items.IRON_INGOT);
-    }),
-    DIAMOND(3, 1561 * VanillaExcavators.DURABILITY_MODIFIER, 8.0F / 3.5f, 0.0f, 10, () -> {
-        return Ingredient.ofItems(Items.DIAMOND);
-    }),
-    GOLD(0, 32 * VanillaExcavators.DURABILITY_MODIFIER, 12.0F / 3.5f, 0.0f, 22, () -> {
-        return Ingredient.ofItems(Items.GOLD_INGOT);
-    }),
-    EMERALD(3, 1028 * VanillaExcavators.DURABILITY_MODIFIER, 12.0F / 3.5f, 0.0f, 25, () -> {
-        return Ingredient.ofItems(Items.EMERALD);
-    }),
-    OBSIDIAN(2, 2048 * VanillaExcavators.DURABILITY_MODIFIER, 5.0F / 3.5f, 0.0f, 5, () -> {
-        return Ingredient.ofItems(Items.OBSIDIAN);
-    }),
-    LAPIS(1, 220 * VanillaExcavators.DURABILITY_MODIFIER, 6.0f / 3.5f, 0.0f, 30, () -> {
-        return Ingredient.ofItems(Items.LAPIS_LAZULI);
-    }),
-    QUARTZ(2, 1028 * VanillaExcavators.DURABILITY_MODIFIER, 8.0F / 3.5f, 0.0f, 10, () -> {
-        return Ingredient.ofItems(Items.QUARTZ);
-    }),
-    FIERY(3, 750 * VanillaExcavators.DURABILITY_MODIFIER, 7.0F / 3.5f, 0f, 15, () -> {
-        return Ingredient.ofItems(Items.MAGMA_BLOCK);
-    }),
-    PRISMARINE(3, 750 * VanillaExcavators.DURABILITY_MODIFIER, 7.0F / 3.5F, 0f, 20, () -> {
-        return Ingredient.ofItems(Items.PRISMARINE_SHARD);
-    }),
-    ENDER(3, 1561 * VanillaExcavators.DURABILITY_MODIFIER, 10f / 3.5f, 0, 10,  () -> {
-        return Ingredient.ofItems(Items.ENDER_PEARL);
-    }),
-    SLIME(2, 1500 * VanillaExcavators.DURABILITY_MODIFIER, 6f / 3.5f, 0, 20, () -> {
-        return Ingredient.ofItems(Items.SLIME_BALL);
-    }),
-    POTATO(1, 500 * VanillaExcavators.DURABILITY_MODIFIER, 4.0F / 3.5f, 0.0f, 100, () -> {
-        return Ingredient.ofItems(Registry.ITEM.get(new Identifier("lil-tater", "lil_tater")));
-    }),
-    GLOWSTONE(2, 442 * VanillaExcavators.DURABILITY_MODIFIER, 5.0F / 3.5f, 0.0f, 15, () -> {
-        return Ingredient.ofItems(Registry.ITEM.get(new Identifier("netherthings", "glowstone_ingot")));
-    }),
-    NETHER(1, 280 * VanillaExcavators.DURABILITY_MODIFIER, 5.0F / 3.5f, 0.0f, 77, () -> {
-        return Ingredient.ofItems(Registry.ITEM.get(new Identifier("netherthings", "nether_brick")));
-    }),
-    VIBRANIUM(3, (int) (21850d * (VanillaExcavators.DURABILITY_MODIFIER / 2.5f)), 22f / 3.5f, 0.0f, 7, () -> {
-        return Ingredient.ofItems(Registry.ITEM.get(new Identifier("netherthings", "vibranium")));
-    });
+    }, "wooden", ItemTags.PLANKS, ItemTags.LOGS),
+    STONE(1, 131, 4.0F / 3.5f, 0.0f, -2.6F, 5, () -> {
+        return Ingredient.fromTag(Tags.Items.COBBLESTONE);
+    }, "stone", Tags.Items.COBBLESTONE, Tags.Items.STONE),
+    IRON(2, 250, 6.0F / 3.5f, 0.0f, -2.8F, 14, () -> {
+        return Ingredient.fromTag(Tags.Items.INGOTS_IRON);
+    }, "iron", Tags.Items.INGOTS_IRON, Tags.Items.STORAGE_BLOCKS_IRON),
+    GOLD(0, 32, 12.0F / 3.5f, 0.0f, -2.5F, 22, () -> {
+        return Ingredient.fromTag(Tags.Items.INGOTS_GOLD);
+    }, "golden", Tags.Items.INGOTS_GOLD, Tags.Items.STORAGE_BLOCKS_GOLD),
+    DIAMOND(3, 1561, 8.0F / 3.5f, 0.0f, -3.0F, 10, () -> {
+        return Ingredient.fromTag(Tags.Items.GEMS_DIAMOND);
+    }, "diamond", Tags.Items.GEMS_DIAMOND, Tags.Items.STORAGE_BLOCKS_DIAMOND),
+    EMERALD(3, 1028, 12.0F / 3.5f, 0.0f, -3.0F, 25, () -> {
+        return Ingredient.fromTag(Tags.Items.GEMS_EMERALD);
+    }, "emerald", Tags.Items.GEMS_EMERALD, Tags.Items.STORAGE_BLOCKS_EMERALD),
+    OBSIDIAN(2, 2048, 5.0F / 3.5f, 0.0f, -3.5F, 5, () -> {
+        return Ingredient.fromTag(Tags.Items.OBSIDIAN);
+    }, "obsidian", Tags.Items.OBSIDIAN),
+    QUARTZ(2, 1028, 8.0F / 3.5f, 0.0f, -2.0F, 10, () -> {
+        return Ingredient.fromTag(Tags.Items.GEMS_QUARTZ);
+    }, "lapis", Tags.Items.GEMS_QUARTZ, Tags.Items.STORAGE_BLOCKS_QUARTZ),
+    LAPIS(1, 220, 6.0f / 3.5f, 0.0f, -2.5F, 30, () -> {
+        return Ingredient.fromTag(Tags.Items.GEMS_LAPIS);
+    }, "quartz", Tags.Items.GEMS_LAPIS, Tags.Items.STORAGE_BLOCKS_LAPIS),
+    FIERY(3, 750, 7.0F / 3.5f, 0f, -2.3F, 15, () -> {
+        return Ingredient.fromTag(ModTags.Items.MAGMA_BLOCK);
+    }, "fiery", ModTags.Items.MAGMA_CREAM, ModTags.Items.MAGMA_BLOCK),
+    PRISMARINE(3, 750, 7.0F / 3.5F, 0f, -2.3F, 20, () -> {
+        return Ingredient.fromTag(Tags.Items.DUSTS_PRISMARINE);
+    }, "prismarine", Tags.Items.DUSTS_PRISMARINE, ModTags.Items.PRISMARINE),
+    ENDER(3, 1561, 10f / 3.5f, 0, -3.3F, 10, () -> {
+        return Ingredient.fromTag(Tags.Items.ENDER_PEARLS);
+    }, "ender", ModTags.Items.DRAGON_HEAD, Tags.Items.END_STONES),
+    SLIME(2, 1500, 6f / 3.5f, 0, -3.0F, 20, () -> {
+        return Ingredient.fromTag(Tags.Items.SLIMEBALLS);
+    }, "slime", Tags.Items.SLIMEBALLS, ModTags.Items.SLIME_BLOCK),
+    GLOWSTONE(2, 442, 5.0F / 3.5f, 0.0f, -2.3F, 15, () -> {
+        return Ingredient.fromTag(ModTags.Items.STORAGE_BLOCKS_GLOWSTONE);
+    }, "glowstone", Tags.Items.DUSTS_GLOWSTONE, ModTags.Items.STORAGE_BLOCKS_GLOWSTONE),
+    NETHER(1, 280, 5.0F / 3.5f, 0.0f, -2.1F, 77, () -> {
+        return Ingredient.fromTag(ModTags.Items.NETHER_BRICKS);
+    }, "nether", Tags.Items.NETHERRACK, ModTags.Items.NETHER_BRICKS);
 
 
-    private final int miningLevel;
+    private final int harvestLevel;
     private final int durability;
-    private final float blockBreakSpeed;
+    private final float efficiency;
     private final float attackDamage;
+    private final float attackSpeed;
     private final int enchantability;
-    private final Lazy<Ingredient> repairIngredient;
+    private final LazyLoadBase<Ingredient> repairMaterial;
+    private final String prefix;
+    private final Tag<Item> tagIngredient1;
+    private final Tag<Item> tagIngredient2;
+    private final int durability_modifier = 5;
 
-    ExcavatorMaterials(int int_1, int int_2, float float_1, float float_2, int int_3, Supplier<Ingredient> supplier_1) {
-        this.miningLevel = int_1;
-        this.durability = int_2;
-        this.blockBreakSpeed = float_1;
-        this.attackDamage = float_2;
-        this.enchantability = int_3;
-        this.repairIngredient = new Lazy(supplier_1);
+    ExcavatorMaterials(int harvestLevel, int durability, float efficiency, float attackDamage, float attackSpeed, int enchantability, Supplier<Ingredient> repairMaterial, String prefix, Tag<Item> ingredient1, Tag<Item> ingredient2) {
+        this.harvestLevel = harvestLevel;
+        this.durability = durability * durability_modifier;
+        this.efficiency = efficiency;
+        this.attackDamage = attackDamage;
+        this.attackSpeed = attackSpeed;
+        this.enchantability = enchantability;
+        this.repairMaterial = new LazyLoadBase<>(repairMaterial);
+        this.prefix = prefix;
+        this.tagIngredient1 = ingredient1;
+        this.tagIngredient2 = ingredient2;
     }
 
-    public int getDurability() {
+    ExcavatorMaterials(int harvestLevel, int durability, float efficiency, float attackDamage, float attackSpeed, int enchantability, Supplier<Ingredient> repairMaterial, String prefix, Tag<Item> ingredient1) {
+        this.harvestLevel = harvestLevel;
+        this.durability = durability * durability_modifier;
+        this.efficiency = efficiency;
+        this.attackDamage = attackDamage;
+        this.attackSpeed = attackSpeed;
+        this.enchantability = enchantability;
+        this.repairMaterial = new LazyLoadBase<>(repairMaterial);
+        this.prefix = prefix;
+        this.tagIngredient1 = ingredient1;
+        this.tagIngredient2 = null;
+    }
+
+
+    @Override
+    public int getMaxUses() {
         return this.durability;
     }
 
-    public float getMiningSpeed() {
-        return this.blockBreakSpeed;
+    @Override
+    public float getEfficiency() {
+        return this.efficiency;
     }
 
+    @Override
     public float getAttackDamage() {
         return this.attackDamage;
     }
 
-    public int getMiningLevel() {
-        return this.miningLevel;
+    @Override
+    public int getHarvestLevel() {
+        return this.harvestLevel;
     }
 
+    @Override
     public int getEnchantability() {
         return this.enchantability;
     }
 
-    public Ingredient getRepairIngredient() {
-        return this.repairIngredient.get();
+    @Override
+    public Ingredient getRepairMaterial() {
+        return this.repairMaterial.getValue();
+    }
+
+    public String getPrefix() {
+        return this.prefix;
+    }
+
+    public Tag<Item> getTagIngredient1() {
+        return this.tagIngredient1;
+    }
+
+    public Tag<Item> getTagIngredient2() {
+        return this.tagIngredient2;
+    }
+
+    public float getAttackSpeed() {
+        return this.attackSpeed;
     }
 }
