@@ -1,5 +1,6 @@
 package de.melanx.vanillaexcavators.common;
 
+import de.melanx.vanillaexcavators.data.tags.ModTags;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.Item;
 import net.minecraft.item.crafting.Ingredient;

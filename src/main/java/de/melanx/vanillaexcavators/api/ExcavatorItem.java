@@ -13,12 +13,8 @@ public class ExcavatorItem extends ShovelItem {
     private IItemTier toolMaterial;
 
     public ExcavatorItem(IItemTier toolMaterial, int attackDamage, float attackSpeed) {
-        this(toolMaterial, attackDamage, attackSpeed, new Item.Properties().group(ItemGroup.TOOLS));
+        super(toolMaterial, attackDamage, attackSpeed, new Item.Properties().group(ItemGroup.TOOLS));
         this.toolMaterial = toolMaterial;
-    }
-
-    public ExcavatorItem(IItemTier toolMaterial, int attackDamage, float attackSpeed, Item.Properties settings) {
-        super(toolMaterial, attackDamage, attackSpeed, settings);
     }
 
     @Override
