@@ -15,6 +15,10 @@ import java.util.List;
 
 public class BlockBreaker {
 
+    private BlockBreaker() {
+        // NO-OP
+    }
+
     /**
      * Breaks blocks within the given radius on the axis the player is facing.
      * If the player is facing the X axis and the radius is 1, a 3x3 area will be destroyed on the X axis.
@@ -103,9 +107,5 @@ public class BlockBreaker {
         }
 
         return potentialBrokenBlocks;
-    }
-
-    private BlockBreaker() {
-        // NO-OP
     }
 }
