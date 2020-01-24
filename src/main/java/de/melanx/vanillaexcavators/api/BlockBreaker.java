@@ -25,7 +25,7 @@ public class BlockBreaker {
      * @param radius         radius to break
      * @param breakValidator check to see if a block can be broken
      */
-    public static void breakInRadius(World world, PlayerEntity playerEntity, int radius, BreakValidator breakValidator, boolean damageTool) {
+    public static void breakInRadius(World world, PlayerEntity playerEntity, int radius, IBreakValidator breakValidator, boolean damageTool) {
         if (!world.isRemote) {
             List<BlockPos> brokenBlocks = getBreakBlocks(world, playerEntity, radius);
             for (BlockPos pos : brokenBlocks) {
