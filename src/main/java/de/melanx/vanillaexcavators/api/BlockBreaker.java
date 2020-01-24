@@ -2,7 +2,6 @@ package de.melanx.vanillaexcavators.api;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
 import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -31,7 +30,7 @@ public class BlockBreaker {
             for (BlockPos pos : brokenBlocks) {
                 BlockState state = world.getBlockState(pos);
                 if (breakValidator.canBreak(state)) {
-                    world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
+                    world.removeBlock(pos, false);
 
                     if (!playerEntity.isCreative()) {
                         BlockPos offsetPos = new BlockPos(pos.getX() + .5, pos.getY() + .5, pos.getZ() + .5);
