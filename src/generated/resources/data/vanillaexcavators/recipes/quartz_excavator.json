@@ -7,10 +7,10 @@
   ],
   "key": {
     "d": {
-      "tag": "forge:gems/lapis"
+      "tag": "forge:gems/quartz"
     },
     "D": {
-      "tag": "forge:storage_blocks/lapis"
+      "tag": "forge:storage_blocks/quartz"
     },
     "s": {
       "item": "minecraft:stick"

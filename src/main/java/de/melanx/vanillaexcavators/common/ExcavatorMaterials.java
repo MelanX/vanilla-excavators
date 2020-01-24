@@ -35,10 +35,10 @@ public enum ExcavatorMaterials implements IItemTier {
     }, "obsidian", Tags.Items.OBSIDIAN),
     QUARTZ(2, 1028, 8.0F / 3.5f, 2, -2.0F, 10, () -> {
         return Ingredient.fromTag(Tags.Items.GEMS_QUARTZ);
-    }, "lapis", Tags.Items.GEMS_QUARTZ, Tags.Items.STORAGE_BLOCKS_QUARTZ),
+    }, "quartz", Tags.Items.GEMS_QUARTZ, Tags.Items.STORAGE_BLOCKS_QUARTZ),
     LAPIS(1, 220, 6.0f / 3.5f, 0, -2.5F, 30, () -> {
         return Ingredient.fromTag(Tags.Items.GEMS_LAPIS);
-    }, "quartz", Tags.Items.GEMS_LAPIS, Tags.Items.STORAGE_BLOCKS_LAPIS),
+    }, "lapis", Tags.Items.GEMS_LAPIS, Tags.Items.STORAGE_BLOCKS_LAPIS),
     FIERY(3, 750, 7.0F / 3.5f, 2, -2.3F, 15, () -> {
         return Ingredient.fromTag(ModTags.Items.MAGMA_BLOCK);
     }, "fiery", ModTags.Items.MAGMA_CREAM, ModTags.Items.MAGMA_BLOCK),
