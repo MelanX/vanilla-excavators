@@ -8,6 +8,7 @@ import net.minecraft.item.*;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.minecraftforge.common.ToolType;
 
 public class ExcavatorItem extends ShovelItem {
     private IItemTier toolMaterial;
@@ -15,6 +16,11 @@ public class ExcavatorItem extends ShovelItem {
     public ExcavatorItem(IItemTier toolMaterial, int attackDamage, float attackSpeed) {
         super(toolMaterial, attackDamage, attackSpeed, new Item.Properties().group(ItemGroup.TOOLS));
         this.toolMaterial = toolMaterial;
+    }
+
+    @Override
+    public boolean canHarvestBlock(BlockState state) {
+        return state.getHarvestTool() == ToolType.SHOVEL;
     }
 
     @Override
