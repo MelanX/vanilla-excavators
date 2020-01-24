@@ -4,7 +4,7 @@ loaderVersion="[28,)"
 [[mods]]
 modId="vanillaexcavators"
 version="${file.jarVersion}"
-displayName="More XFood"
+displayName="Vanilla Excavators"
 updateJSONURL="https://raw.githubusercontent.com/MelanX/vanilla-excavators/master/update/update.json"
 authors="MelanX"
 credits="Draylar made this mod for Fabric, this is just a fork for Forge."
