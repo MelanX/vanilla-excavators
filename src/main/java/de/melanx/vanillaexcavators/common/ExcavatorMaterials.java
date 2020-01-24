@@ -12,49 +12,49 @@ import net.minecraftforge.common.Tags;
 import java.util.function.Supplier;
 
 public enum ExcavatorMaterials implements IItemTier {
-    WOOD(0, 59, 2.0F / 3.5f, 0.0f, -2.5F, 15, () -> {
+    WOOD(0, 59, 2.0F / 3.5f, 0, -2.5F, 15, () -> {
         return Ingredient.fromTag(ItemTags.PLANKS);
     }, "wooden", ItemTags.PLANKS, ItemTags.LOGS),
-    STONE(1, 131, 4.0F / 3.5f, 0.0f, -2.6F, 5, () -> {
+    STONE(1, 131, 4.0F / 3.5f, 1, -2.6F, 5, () -> {
         return Ingredient.fromTag(Tags.Items.COBBLESTONE);
     }, "stone", Tags.Items.COBBLESTONE, Tags.Items.STONE),
-    IRON(2, 250, 6.0F / 3.5f, 0.0f, -2.8F, 14, () -> {
+    IRON(2, 250, 6.0F / 3.5f, 2, -2.8F, 14, () -> {
         return Ingredient.fromTag(Tags.Items.INGOTS_IRON);
     }, "iron", Tags.Items.INGOTS_IRON, Tags.Items.STORAGE_BLOCKS_IRON),
-    GOLD(0, 32, 12.0F / 3.5f, 0.0f, -2.5F, 22, () -> {
+    GOLD(0, 32, 12.0F / 3.5f, 2, -2.5F, 22, () -> {
         return Ingredient.fromTag(Tags.Items.INGOTS_GOLD);
     }, "golden", Tags.Items.INGOTS_GOLD, Tags.Items.STORAGE_BLOCKS_GOLD),
-    DIAMOND(3, 1561, 8.0F / 3.5f, 0.0f, -3.0F, 10, () -> {
+    DIAMOND(3, 1561, 8.0F / 3.5f, 5, -3.0F, 10, () -> {
         return Ingredient.fromTag(Tags.Items.GEMS_DIAMOND);
     }, "diamond", Tags.Items.GEMS_DIAMOND, Tags.Items.STORAGE_BLOCKS_DIAMOND),
-    EMERALD(3, 1028, 12.0F / 3.5f, 0.0f, -3.0F, 25, () -> {
+    EMERALD(3, 1028, 12.0F / 3.5f, 5, -3.0F, 25, () -> {
         return Ingredient.fromTag(Tags.Items.GEMS_EMERALD);
     }, "emerald", Tags.Items.GEMS_EMERALD, Tags.Items.STORAGE_BLOCKS_EMERALD),
-    OBSIDIAN(2, 2048, 5.0F / 3.5f, 0.0f, -3.5F, 5, () -> {
+    OBSIDIAN(2, 2048, 5.0F / 3.5f, 3, -3.5F, 5, () -> {
         return Ingredient.fromTag(Tags.Items.OBSIDIAN);
     }, "obsidian", Tags.Items.OBSIDIAN),
-    QUARTZ(2, 1028, 8.0F / 3.5f, 0.0f, -2.0F, 10, () -> {
+    QUARTZ(2, 1028, 8.0F / 3.5f, 2, -2.0F, 10, () -> {
         return Ingredient.fromTag(Tags.Items.GEMS_QUARTZ);
     }, "lapis", Tags.Items.GEMS_QUARTZ, Tags.Items.STORAGE_BLOCKS_QUARTZ),
-    LAPIS(1, 220, 6.0f / 3.5f, 0.0f, -2.5F, 30, () -> {
+    LAPIS(1, 220, 6.0f / 3.5f, 0, -2.5F, 30, () -> {
         return Ingredient.fromTag(Tags.Items.GEMS_LAPIS);
     }, "quartz", Tags.Items.GEMS_LAPIS, Tags.Items.STORAGE_BLOCKS_LAPIS),
-    FIERY(3, 750, 7.0F / 3.5f, 0f, -2.3F, 15, () -> {
+    FIERY(3, 750, 7.0F / 3.5f, 2, -2.3F, 15, () -> {
         return Ingredient.fromTag(ModTags.Items.MAGMA_BLOCK);
     }, "fiery", ModTags.Items.MAGMA_CREAM, ModTags.Items.MAGMA_BLOCK),
-    PRISMARINE(3, 750, 7.0F / 3.5F, 0f, -2.3F, 20, () -> {
+    PRISMARINE(3, 750, 7.0F / 3.5F, 2, -2.3F, 20, () -> {
         return Ingredient.fromTag(Tags.Items.DUSTS_PRISMARINE);
     }, "prismarine", Tags.Items.DUSTS_PRISMARINE, ModTags.Items.PRISMARINE),
-    ENDER(3, 1561, 10f / 3.5f, 0, -3.3F, 10, () -> {
+    ENDER(3, 1561, 10f / 3.5f, 6, -3.3F, 10, () -> {
         return Ingredient.fromTag(Tags.Items.ENDER_PEARLS);
     }, "ender", ModTags.Items.DRAGON_HEAD, Tags.Items.END_STONES),
-    SLIME(2, 1500, 6f / 3.5f, 0, -3.0F, 20, () -> {
+    SLIME(2, 1500, 6f / 3.5f, 3, -3.0F, 20, () -> {
         return Ingredient.fromTag(Tags.Items.SLIMEBALLS);
     }, "slime", Tags.Items.SLIMEBALLS, ModTags.Items.SLIME_BLOCK),
-    GLOWSTONE(2, 442, 5.0F / 3.5f, 0.0f, -2.3F, 15, () -> {
+    GLOWSTONE(2, 442, 5.0F / 3.5f, 2, -2.3F, 15, () -> {
         return Ingredient.fromTag(ModTags.Items.STORAGE_BLOCKS_GLOWSTONE);
     }, "glowstone", Tags.Items.DUSTS_GLOWSTONE, ModTags.Items.STORAGE_BLOCKS_GLOWSTONE),
-    NETHER(1, 280, 5.0F / 3.5f, 0.0f, -2.1F, 77, () -> {
+    NETHER(1, 280, 5.0F / 3.5f, 4, -2.1F, 77, () -> {
         return Ingredient.fromTag(ModTags.Items.NETHER_BRICKS);
     }, "nether", Tags.Items.NETHERRACK, ModTags.Items.NETHER_BRICKS);
 
