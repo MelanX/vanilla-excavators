@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " d ",
+    "DsD",
+    " s "
+  ],
+  "key": {
+    "d": {
+      "tag": "forge:ingots/gold"
+    },
+    "D": {
+      "tag": "forge:storage_blocks/gold"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "vanillaexcavators:golden_excavator"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " d ",
+    "DsD",
+    " s "
+  ],
+  "key": {
+    "d": {
+      "tag": "minecraft:planks"
+    },
+    "D": {
+      "tag": "minecraft:logs"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "vanillaexcavators:wooden_excavator"
+  }
+}

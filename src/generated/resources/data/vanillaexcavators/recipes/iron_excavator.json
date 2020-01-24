@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " d ",
+    "DsD",
+    " s "
+  ],
+  "key": {
+    "d": {
+      "tag": "forge:ingots/iron"
+    },
+    "D": {
+      "tag": "forge:storage_blocks/iron"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "vanillaexcavators:iron_excavator"
+  }
+}

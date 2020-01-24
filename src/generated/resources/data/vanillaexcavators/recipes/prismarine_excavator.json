@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " d ",
+    "DsD",
+    " s "
+  ],
+  "key": {
+    "d": {
+      "tag": "forge:dusts/prismarine"
+    },
+    "D": {
+      "tag": "forge:prismarine"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "vanillaexcavators:prismarine_excavator"
+  }
+}

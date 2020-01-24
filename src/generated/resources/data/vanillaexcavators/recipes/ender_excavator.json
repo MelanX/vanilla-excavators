@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " d ",
+    "DsD",
+    " s "
+  ],
+  "key": {
+    "d": {
+      "tag": "forge:heads/dragon_head"
+    },
+    "D": {
+      "tag": "forge:end_stones"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "vanillaexcavators:ender_excavator"
+  }
+}
