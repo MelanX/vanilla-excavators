@@ -86,7 +86,7 @@ repositories {
 
 dependencies {
 	minecraft "net.minecraftforge:forge:${mc_version}-${forge_version}"
-	runtimeOnly fg.deobf("mezz.jei:jei-1.14.4:6.0.0.18")
+//	runtimeOnly fg.deobf("mezz.jei:jei-1.15.1:6.0.0.1")
 }
 
 jar {

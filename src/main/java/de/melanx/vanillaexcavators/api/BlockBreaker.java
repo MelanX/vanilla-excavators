@@ -38,7 +38,7 @@ public class BlockBreaker {
 
                     if (!playerEntity.isCreative()) {
                         BlockPos offsetPos = new BlockPos(pos.getX() + .5, pos.getY() + .5, pos.getZ() + .5);
-                        dropItems(world, Block.func_220077_a(state, (ServerWorld) world, pos, null, playerEntity, playerEntity.getHeldItemMainhand()), offsetPos);
+                        dropItems(world, Block.getDrops(state, (ServerWorld) world, pos, null, playerEntity, playerEntity.getHeldItemMainhand()), offsetPos);
                         state.spawnAdditionalDrops(world, pos, playerEntity.getHeldItemMainhand());
                     }
 

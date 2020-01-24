@@ -6,7 +6,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.Tag;
-import net.minecraft.util.LazyLoadBase;
+import net.minecraft.util.LazyValue;
 import net.minecraftforge.common.Tags;
 
 import java.util.function.Supplier;
@@ -65,7 +65,7 @@ public enum ExcavatorMaterials implements IItemTier {
     private final float attackDamage;
     private final float attackSpeed;
     private final int enchantability;
-    private final LazyLoadBase<Ingredient> repairMaterial;
+    private final LazyValue<Ingredient> repairMaterial;
     private final String prefix;
     private final Tag<Item> tagIngredient1;
     private final Tag<Item> tagIngredient2;
@@ -78,7 +78,7 @@ public enum ExcavatorMaterials implements IItemTier {
         this.attackDamage = attackDamage;
         this.attackSpeed = attackSpeed;
         this.enchantability = enchantability;
-        this.repairMaterial = new LazyLoadBase<>(repairMaterial);
+        this.repairMaterial = new LazyValue<>(repairMaterial);
         this.prefix = prefix;
         this.tagIngredient1 = ingredient1;
         this.tagIngredient2 = ingredient2;
@@ -91,7 +91,7 @@ public enum ExcavatorMaterials implements IItemTier {
         this.attackDamage = attackDamage;
         this.attackSpeed = attackSpeed;
         this.enchantability = enchantability;
-        this.repairMaterial = new LazyLoadBase<>(repairMaterial);
+        this.repairMaterial = new LazyValue<>(repairMaterial);
         this.prefix = prefix;
         this.tagIngredient1 = ingredient1;
         this.tagIngredient2 = null;
