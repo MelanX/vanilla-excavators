@@ -14,8 +14,8 @@
   "item.vanillaexcavators.ender_excavator": "Большая эндер-лопата",
   "item.vanillaexcavators.glowstone_excavator": "Светокаменная большая лопата",
   "item.vanillaexcavators.nether_excavator": "Незерская большая лопата",
-  "item.vanillahammers.coal_excavator": "Угольная большая лопата",
-  "item.vanillahammers.bone_excavator": "Костяная большая лопата",
-  "item.vanillahammers.redstone_excavator": "Редстоуновая большая лопата",
-  "item.vanillahammers.paper_excavator": "Бумажная большая лопата"
+  "item.vanillaexcavators.coal_excavator": "Угольная большая лопата",
+  "item.vanillaexcavators.bone_excavator": "Костяная большая лопата",
+  "item.vanillaexcavators.redstone_excavator": "Редстоуновая большая лопата",
+  "item.vanillaexcavators.paper_excavator": "Бумажная большая лопата"
 }
