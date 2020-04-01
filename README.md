@@ -13,8 +13,8 @@ This mod is just a fork of the Fabric mod and ported to Forge.
 ## Wiki
 
 For more information about the mod, check out the wiki:
-  - [Item Stats](https://github.com/MelanX/vanilla-excavators/wiki/Item-Stats)
-  - [Recipes](https://github.com/MelanX/vanilla-excavators/wiki/Recipes)
+  - [Item Stats](https://github.com/MelanX/vanilla-excavators/wiki/Item-Stats) (WIP)
+  - [Recipes](https://github.com/MelanX/vanilla-excavators/wiki/Recipes) (WIP)
 
 ## License
 
