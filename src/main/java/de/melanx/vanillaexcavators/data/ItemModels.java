@@ -1,7 +1,7 @@
 package de.melanx.vanillaexcavators.data;
 
 import de.melanx.vanillaexcavators.VanillaExcavators;
-import de.melanx.vanillaexcavators.common.ExcavatorRegistry;
+import de.melanx.vanillaexcavators.items.ExcavatorRegistry;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.model.generators.ExistingFileHelper;

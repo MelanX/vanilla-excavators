@@ -1,8 +1,6 @@
 package de.melanx.vanillaexcavators.data;
 
 import de.melanx.vanillaexcavators.VanillaExcavators;
-import de.melanx.vanillaexcavators.data.tags.BlockTags;
-import de.melanx.vanillaexcavators.data.tags.ItemTags;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.client.model.generators.ExistingFileHelper;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -18,12 +16,13 @@ public class DataCreator {
         ExistingFileHelper helper = event.getExistingFileHelper();
 
         if (event.includeServer()) {
-            generator.addProvider(new BlockTags(generator));
             generator.addProvider(new ItemTags(generator));
             generator.addProvider(new Recipes(generator));
         }
         if (event.includeClient()) {
             generator.addProvider(new ItemModels(generator, helper));
+            generator.addProvider(new Languages.English(generator));
+            generator.addProvider(new Languages.German(generator));
         }
     }
 

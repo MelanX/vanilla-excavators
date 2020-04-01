@@ -7,13 +7,13 @@
   ],
   "key": {
     "D": {
-      "tag": "forge:prismarine"
+      "tag": "forge:paper"
     },
     "s": {
       "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "vanillaexcavators:prismarine_excavator"
+    "item": "vanillaexcavators:paper_excavator"
   }
 }

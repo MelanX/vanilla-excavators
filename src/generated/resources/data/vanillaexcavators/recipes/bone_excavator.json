@@ -7,13 +7,13 @@
   ],
   "key": {
     "D": {
-      "tag": "forge:prismarine"
+      "tag": "forge:bone_block"
     },
     "s": {
       "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "vanillaexcavators:prismarine_excavator"
+    "item": "vanillaexcavators:bone_excavator"
   }
 }

@@ -14,9 +14,9 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = "${mc_version}-${mod_version}"
+version = mod_version
 group = 'de.melanx.vanillaexcavators'
-archivesBaseName = 'vanillaexcavators'
+archivesBaseName = "vanillaexcavators-${mc_version}"
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8'
 
@@ -82,11 +82,15 @@ repositories {
 		name = "Progwml6 maven"
 		url = "https://dvs1.progwml6.com/files/maven/"
 	}
+	flatDir {
+		dirs "libs"
+	}
 }
 
 dependencies {
 	minecraft "net.minecraftforge:forge:${mc_version}-${forge_version}"
-//	runtimeOnly fg.deobf("mezz.jei:jei-1.15.1:6.0.0.1")
+	runtimeOnly fg.deobf("mezz.jei:jei-1.15.2:6.0.0.2")
+	compile fg.deobf("de.melanx.morevanillalib:morevanillalib:1.15.2-1.0.2")
 }
 
 jar {

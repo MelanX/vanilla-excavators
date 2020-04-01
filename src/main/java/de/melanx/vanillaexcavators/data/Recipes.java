@@ -1,7 +1,7 @@
 package de.melanx.vanillaexcavators.data;
 
-import de.melanx.vanillaexcavators.common.ExcavatorMaterials;
-import de.melanx.vanillaexcavators.common.ExcavatorRegistry;
+import de.melanx.morevanillalib.api.BigBreakMaterials;
+import de.melanx.vanillaexcavators.items.ExcavatorRegistry;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.IFinishedRecipe;
 import net.minecraft.data.RecipeProvider;
@@ -23,7 +23,7 @@ public class Recipes extends RecipeProvider {
     protected void registerRecipes(Consumer<IFinishedRecipe> consumer) {
         int i = 0;
         for (RegistryObject<Item> item : ExcavatorRegistry.ITEMS.getEntries()) {
-            ExcavatorMaterials hammer = ExcavatorMaterials.values()[i];
+            BigBreakMaterials hammer = BigBreakMaterials.values()[i];
             Tag<Item> tagIngredient1 = hammer.getTagIngredient1();
             Tag<Item> tagIngredient2 = hammer.getTagIngredient2();
             ShapedRecipeBuilder recipe = createRecipe(item.get(), tagIngredient1, tagIngredient2);

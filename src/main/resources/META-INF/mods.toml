@@ -15,13 +15,20 @@ Adds a ton of new excavators to the game!
 [[dependencies.vanillaexcavators]]
     modId="forge"
     mandatory=true
-    versionRange="[29,)"
+    versionRange="[31.1.18,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.vanillahammers]]
+    modId="morevanillalib"
+    mandatory=true
+    versionRange="[1.0.1,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.vanillaexcavators]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.15,1.16)"
+    versionRange="[1.15.2,1.16)"
     ordering="NONE"
     side="BOTH"

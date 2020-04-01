@@ -1,6 +1,6 @@
 package de.melanx.vanillaexcavators;
 
-import de.melanx.vanillaexcavators.common.ExcavatorRegistry;
+import de.melanx.vanillaexcavators.items.ExcavatorRegistry;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import org.apache.logging.log4j.LogManager;

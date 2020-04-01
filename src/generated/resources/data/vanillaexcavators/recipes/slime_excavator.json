@@ -1,14 +1,11 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    " d ",
+    " D ",
     "DsD",
     " s "
   ],
   "key": {
-    "d": {
-      "tag": "forge:slimeballs"
-    },
     "D": {
       "tag": "forge:slime_block"
     },

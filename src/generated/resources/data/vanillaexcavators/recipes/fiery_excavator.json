@@ -1,14 +1,11 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    " d ",
+    " D ",
     "DsD",
     " s "
   ],
   "key": {
-    "d": {
-      "tag": "forge:magma_cream"
-    },
     "D": {
       "tag": "forge:magma_block"
     },

@@ -7,13 +7,13 @@
   ],
   "key": {
     "D": {
-      "tag": "forge:prismarine"
+      "tag": "forge:storage_blocks/redstone"
     },
     "s": {
       "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "vanillaexcavators:prismarine_excavator"
+    "item": "vanillaexcavators:redstone_excavator"
   }
 }

@@ -1,14 +1,11 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    " d ",
+    " D ",
     "DsD",
     " s "
   ],
   "key": {
-    "d": {
-      "tag": "forge:gems/lapis"
-    },
     "D": {
       "tag": "forge:storage_blocks/lapis"
     },

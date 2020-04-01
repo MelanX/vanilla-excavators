@@ -7,13 +7,13 @@
   ],
   "key": {
     "D": {
-      "tag": "forge:prismarine"
+      "tag": "forge:storage_blocks/coal"
     },
     "s": {
       "item": "minecraft:stick"
     }
   },
   "result": {
-    "item": "vanillaexcavators:prismarine_excavator"
+    "item": "vanillaexcavators:coal_excavator"
   }
 }

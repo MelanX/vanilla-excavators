@@ -3,11 +3,12 @@
   "promos": {
     "1.14.4-latest": "1.0",
     "1.14.4-recommended": "1.0",
-    "1.15.2-latest": "1.0",
-    "1.15.2-recommended": "1.0"
+    "1.15.2-latest": "2.0",
+    "1.15.2-recommended": "2.0"
   },
 
   "1.15.2": {
+    "2.0": "Added MoreVanillaLib as dependency -> much more configuration\nAdded 4 new materials\nAdded German and Russian translation\nChanged recipes a bit",
     "1.0": "Port to 1.15"
   },
   "1.14.4": {
