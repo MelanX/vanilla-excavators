@@ -21,6 +21,21 @@ public class ItemTags extends ItemTagsProvider {
             Item item = registryObject.get();
             BigBreakMaterials itemTier = (BigBreakMaterials) ((ExcavatorItem) item).getToolMaterial();
             switch (itemTier) {
+                case WOOD:
+                    getBuilder(ModTags.Items.WOOD_TOOLS).add(item);
+                    break;
+                case STONE:
+                    getBuilder(ModTags.Items.STONE_TOOLS).add(item);
+                    break;
+                case IRON:
+                    getBuilder(ModTags.Items.IRON_TOOLS).add(item);
+                    break;
+                case GOLD:
+                    getBuilder(ModTags.Items.GOLD_TOOLS).add(item);
+                    break;
+                case DIAMOND:
+                    getBuilder(ModTags.Items.DIAMOND_TOOLS).add(item);
+                    break;
                 case BONE:
                     getBuilder(ModTags.Items.BONE_TOOLS).add(item);
                     break;

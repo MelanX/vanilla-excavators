@@ -22,7 +22,7 @@ Adds a ton of new excavators to the game!
 [[dependencies.vanillahammers]]
     modId="morevanillalib"
     mandatory=true
-    versionRange="[1.0.1,)"
+    versionRange="[1.1,)"
     ordering="NONE"
     side="BOTH"
 

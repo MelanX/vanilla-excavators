@@ -8,6 +8,7 @@
   },
 
   "1.15.2": {
+    "2.0.1": "Added tags for vanilla materials",
     "2.0": "Added MoreVanillaLib as dependency -> much more configuration\nAdded 4 new materials\nAdded German and Russian translation\nChanged recipes a bit",
     "1.0": "Port to 1.15"
   },
