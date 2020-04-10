@@ -14,7 +14,11 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = mod_version
+version = "${mod_version}"
+def env = System.getenv()
+if (env.BUILD_NUMBER) {
+	version = version + "+" + "${env.BUILD_NUMBER}"
+}
 group = 'de.melanx.vanillaexcavators'
 archivesBaseName = "vanillaexcavators-${mc_version}"
 
@@ -82,15 +86,15 @@ repositories {
 		name = "Progwml6 maven"
 		url = "https://dvs1.progwml6.com/files/maven/"
 	}
-	flatDir {
-		dirs "libs"
+	maven {
+		url = "https://maven.melanx.de"
 	}
 }
 
 dependencies {
 	minecraft "net.minecraftforge:forge:${mc_version}-${forge_version}"
 	runtimeOnly fg.deobf("mezz.jei:jei-1.15.2:6.0.0.2")
-	compile fg.deobf("de.melanx.morevanillalib:morevanillalib:1.15.2-1.1")
+	compile fg.deobf("de.melanx.morevanillalib:morevanillalib-1.15.2:1.1.1+1")
 }
 
 jar {
@@ -104,5 +108,44 @@ jar {
 				"Implementation-Vendor" :"vanillaexcavators",
 				"Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
 		])
+	}
+}
+
+jar.finalizedBy('reobfJar')
+
+task sourcesJar(type: Jar, dependsOn: classes) {
+	classifier = 'sources'
+	from sourceSets.main.allSource
+}
+
+task deobfJar(type: Jar) {
+	from sourceSets.main.output
+	classifier 'deobf'
+}
+
+artifacts {
+	archives jar
+	archives sourcesJar
+	archives deobfJar
+}
+
+publishing {
+	publications {
+		mavenJava(MavenPublication) {
+			groupId = project.group
+			artifactId = project.archivesBaseName
+			version = project.version
+			artifact jar
+			artifact sourcesJar
+			artifact deobfJar
+		}
+	}
+}
+
+publishing {
+	repositories {
+		maven {
+			url "/var/www/maven"
+		}
 	}
 }
