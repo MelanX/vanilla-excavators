@@ -23,27 +23,11 @@ public class Recipes extends RecipeProvider {
     protected void registerRecipes(Consumer<IFinishedRecipe> consumer) {
         int i = 0;
         for (RegistryObject<Item> item : ExcavatorRegistry.ITEMS.getEntries()) {
-            BigBreakMaterials hammer = BigBreakMaterials.values()[i];
-            Tag<Item> tagIngredient1 = hammer.getTagIngredient1();
-            Tag<Item> tagIngredient2 = hammer.getTagIngredient2();
-            ShapedRecipeBuilder recipe = createRecipe(item.get(), tagIngredient1, tagIngredient2);
+            BigBreakMaterials excavator = BigBreakMaterials.values()[i];
+            Tag<Item> tagIngredient = excavator.getTagIngredient();
+            ShapedRecipeBuilder recipe = createRecipe(item.get(), tagIngredient);
             recipe.build(consumer);
             i++;
-        }
-    }
-
-    private ShapedRecipeBuilder createRecipe(Item result, Tag<Item> ingredient1, Tag<Item> ingredient2) {
-        if (ingredient2 == null) {
-            return createRecipe(result, ingredient1);
-        } else {
-            return ShapedRecipeBuilder.shapedRecipe(result)
-                    .key('d', ingredient1)
-                    .key('D', ingredient2)
-                    .key('s', Items.STICK)
-                    .patternLine(" d ")
-                    .patternLine("DsD")
-                    .patternLine(" s ")
-                    .addCriterion("has_material", hasItem(ingredient1));
         }
     }
 
@@ -51,9 +35,9 @@ public class Recipes extends RecipeProvider {
         return ShapedRecipeBuilder.shapedRecipe(result)
                 .key('D', ingredient)
                 .key('s', Items.STICK)
-                .patternLine(" D ")
-                .patternLine("DsD")
-                .patternLine(" s ")
+                .patternLine("D")
+                .patternLine("s")
+                .patternLine("s")
                 .addCriterion("has_material", hasItem(ingredient));
     }
 }

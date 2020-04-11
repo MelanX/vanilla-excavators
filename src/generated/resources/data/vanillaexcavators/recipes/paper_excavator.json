@@ -1,13 +1,13 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    " D ",
-    "DsD",
-    " s "
+    "D",
+    "s",
+    "s"
   ],
   "key": {
     "D": {
-      "tag": "forge:paper"
+      "tag": "forge:paper_bundle"
     },
     "s": {
       "item": "minecraft:stick"

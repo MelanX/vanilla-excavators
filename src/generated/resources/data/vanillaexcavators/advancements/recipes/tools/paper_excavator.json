@@ -11,7 +11,7 @@
       "conditions": {
         "items": [
           {
-            "tag": "forge:paper"
+            "tag": "forge:paper_bundle"
           }
         ]
       }

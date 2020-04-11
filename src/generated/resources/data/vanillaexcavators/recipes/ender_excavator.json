@@ -1,16 +1,13 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    " d ",
-    "DsD",
-    " s "
+    "D",
+    "s",
+    "s"
   ],
   "key": {
-    "d": {
-      "tag": "forge:heads/dragon_head"
-    },
     "D": {
-      "tag": "forge:end_stones"
+      "tag": "forge:clean_endstone"
     },
     "s": {
       "item": "minecraft:stick"
