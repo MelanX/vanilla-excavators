@@ -19,7 +19,7 @@ Adds a ton of new excavators to the game!
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.vanillahammers]]
+[[dependencies.vanillaexcavators]]
     modId="morevanillalib"
     mandatory=true
     versionRange="[1.2,)"
