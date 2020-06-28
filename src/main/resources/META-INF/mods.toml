@@ -1,5 +1,5 @@
 modLoader="javafml"
-loaderVersion="[29,)"
+loaderVersion="[32,)"
 
 [[mods]]
 modId="vanillaexcavators"
@@ -15,20 +15,20 @@ Adds a ton of new excavators to the game!
 [[dependencies.vanillaexcavators]]
     modId="forge"
     mandatory=true
-    versionRange="[31.1.18,)"
+    versionRange="[32,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.vanillaexcavators]]
     modId="morevanillalib"
     mandatory=true
-    versionRange="[1.2,)"
+    versionRange="[1.2.5,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.vanillaexcavators]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.15.2,1.16)"
+    versionRange="[1.16.1,)"
     ordering="NONE"
     side="BOTH"

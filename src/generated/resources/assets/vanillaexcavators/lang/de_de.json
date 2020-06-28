@@ -6,7 +6,7 @@
   "item.vanillaexcavators.ender_excavator": "Enderausgraber",
   "item.vanillaexcavators.fiery_excavator": "Feuerausgraber",
   "item.vanillaexcavators.glowstone_excavator": "Glowstoneausgraber",
-  "item.vanillaexcavators.golden_excavator": "Goldausgraber",
+  "item.vanillaexcavators.gold_excavator": "Goldausgraber",
   "item.vanillaexcavators.iron_excavator": "Eisenausgraber",
   "item.vanillaexcavators.lapis_excavator": "Lapisausgraber",
   "item.vanillaexcavators.nether_excavator": "Netherausgraber",
@@ -17,5 +17,5 @@
   "item.vanillaexcavators.redstone_excavator": "Redstoneausgraber",
   "item.vanillaexcavators.slime_excavator": "Schleimausgraber",
   "item.vanillaexcavators.stone_excavator": "Steinausgraber",
-  "item.vanillaexcavators.wooden_excavator": "Holzausgraber"
+  "item.vanillaexcavators.wood_excavator": "Holzausgraber"
 }

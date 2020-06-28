@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "vanillaexcavators:wooden_excavator"
+    "vanillaexcavators:wood_excavator"
   ],
   "optional": []
 }

@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "vanillaexcavators:wooden_excavator"
+      "vanillaexcavators:wood_excavator"
     ]
   },
   "criteria": {
@@ -19,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "vanillaexcavators:wooden_excavator"
+        "recipe": "vanillaexcavators:wood_excavator"
       }
     }
   },
