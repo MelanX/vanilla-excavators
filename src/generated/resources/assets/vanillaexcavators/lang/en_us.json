@@ -6,10 +6,11 @@
   "item.vanillaexcavators.ender_excavator": "Ender Excavator",
   "item.vanillaexcavators.fiery_excavator": "Fiery Excavator",
   "item.vanillaexcavators.glowstone_excavator": "Glowstone Excavator",
-  "item.vanillaexcavators.gold_excavator": "Golden Excavator",
+  "item.vanillaexcavators.gold_excavator": "Gold Excavator",
   "item.vanillaexcavators.iron_excavator": "Iron Excavator",
   "item.vanillaexcavators.lapis_excavator": "Lapis Excavator",
   "item.vanillaexcavators.nether_excavator": "Nether Excavator",
+  "item.vanillaexcavators.netherite_excavator": "Netherite Excavator",
   "item.vanillaexcavators.obsidian_excavator": "Obsidian Excavator",
   "item.vanillaexcavators.paper_excavator": "Paper Excavator",
   "item.vanillaexcavators.prismarine_excavator": "Prismarine Excavator",
@@ -17,5 +18,5 @@
   "item.vanillaexcavators.redstone_excavator": "Redstone Excavator",
   "item.vanillaexcavators.slime_excavator": "Slime Excavator",
   "item.vanillaexcavators.stone_excavator": "Stone Excavator",
-  "item.vanillaexcavators.wood_excavator": "Wooden Excavator"
+  "item.vanillaexcavators.wood_excavator": "Wood Excavator"
 }

@@ -4,9 +4,13 @@
     "1.14.4-latest": "1.0",
     "1.14.4-recommended": "1.0",
     "1.15.2-latest": "2.1",
-    "1.15.2-recommended": "2.1"
+    "1.15.2-recommended": "2.1",
+    "1.16.1-latest": "2.1.1"
   },
 
+  "1.16.1": {
+    "2.1.1": "Port to 1.16.1"
+  },
   "1.15.2": {
     "2.1": "Changed a lot of recipes\nRe-balanced tools due to recipe changes",
     "2.0.1": "Added tags for vanilla materials",

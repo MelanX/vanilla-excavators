@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "D",
+    "s",
+    "s"
+  ],
+  "key": {
+    "D": {
+      "tag": "forge:storage_blocks/netherite"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "vanillaexcavators:netherite_excavator"
+  }
+}
