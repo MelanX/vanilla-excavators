@@ -61,6 +61,9 @@ public class ItemTags extends ItemTagsProvider {
                 case NETHER:
                     func_240522_a_(ModTags.Items.NETHER_TOOLS).func_240534_a_(item);
                     break;
+                case NETHERITE:
+                    func_240522_a_(ModTags.Items.NETHERITE_TOOLS).func_240534_a_(item);
+                    break;
                 case OBSIDIAN:
                     func_240522_a_(ModTags.Items.OBSIDIAN_TOOLS).func_240534_a_(item);
                     break;
