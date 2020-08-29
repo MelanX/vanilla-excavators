@@ -16,14 +16,14 @@ Adds a ton of new excavators to the game!
 [[dependencies.vanillaexcavators]]
     modId="forge"
     mandatory=true
-    versionRange="[33,)"
+    versionRange="[33.0.18,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.vanillaexcavators]]
     modId="morevanillalib"
     mandatory=true
-    versionRange="[1.2.9,)"
+    versionRange="[1.2.12,)"
     ordering="NONE"
     side="BOTH"
 
