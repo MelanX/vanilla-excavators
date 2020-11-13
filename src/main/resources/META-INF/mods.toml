@@ -23,7 +23,7 @@ Adds a ton of new excavators to the game!
 [[dependencies.vanillaexcavators]]
     modId="morevanillalib"
     mandatory=true
-    versionRange="[1.3,)"
+    versionRange="[1.3.8,)"
     ordering="NONE"
     side="BOTH"
 

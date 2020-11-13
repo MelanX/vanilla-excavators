@@ -15,5 +15,11 @@
   },
   "result": {
     "item": "vanillaexcavators:ender_excavator"
-  }
+  },
+  "conditions": [
+    {
+      "value": true,
+      "type": "morevanillalib:vanilla_only"
+    }
+  ]
 }
