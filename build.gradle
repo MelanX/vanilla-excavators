@@ -29,6 +29,7 @@ apply from: 'https://raw.githubusercontent.com/MinecraftModDevelopment/Gradle-Co
 loadSecrets()
 group = 'de.melanx.vanillaexcavators'
 archivesBaseName = "vanillaexcavators-${mc_version}"
+version = getVersion(group, archivesBaseName, mod_version)
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8'
 
